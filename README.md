@@ -6,12 +6,13 @@ Jirafeau is a project permitting a "one-click-filesharing", which makes it possi
 
 A demonstration of the latest version is available on [jirafeau.net](http://jirafeau.net/).
 
-![Screenshot1](http://i.imgur.com/TPjh48P.png)
+![pic of jirafeau](https://user-images.githubusercontent.com/34105153/127313997-16e06971-b0a8-414e-850a-ab26b1f6f572.png "Screenshot of the demo @ jirafeau.net")
 
 Latest CI Status:
 Master [![Build Status Master](https://gitlab.com/mojo42/Jirafeau/badges/master/build.svg)](https://gitlab.com/mojo42/Jirafeau/commits/master)
 Next Release [![Build Status Next Release](https://gitlab.com/mojo42/Jirafeau/badges/test/build.svg)](https://gitlab.com/mojo42/Jirafeau/commits/master)
 [All Branch Builds](https://gitlab.com/mojo42/Jirafeau/pipelines?scope=branches)
+
 
 ## Main features
 
@@ -26,7 +27,7 @@ Next Release [![Build Status Next Release](https://gitlab.com/mojo42/Jirafeau/ba
 - Maximal upload size configurable
 - NO database, only use basic PHP
 - Simple language support :gb: :fr: :de: :it: :nl: :ro: :sk: :hu: :cn: :gr: :ru: :es: :tk: :flag_tr:
-- File level [Deduplication](http://en.wikipedia.org/wiki/Data_deduplication) for storage optimization (does store duplicate files only once, but generate multiple links)
+- File level [deduplication](http://en.wikipedia.org/wiki/Data_deduplication) for storage optimization (does store duplicate files only once, but generates multiple links)
 - Optional data encryption
 - Small administration interface
 - CLI script to remove expired files automatically with a cronjob
@@ -35,23 +36,22 @@ Next Release [![Build Status Next Release](https://gitlab.com/mojo42/Jirafeau/ba
 - Bash script to upload files via command line
 - Themes
 
-Jirafeau is a fork of the original project [Jyraphe](http://home.gna.org/jyraphe/) based on the 0.5 (stable version) with a **lot** of modifications.
+Jirafeau is a fork of the original project [Jyraphe](http://home.gna.org/jyraphe/) based on the 0.5 (stable) version with a **lot** of modifications.
 
 As it's original project, Jirafeau is made in the [KISS](http://en.wikipedia.org/wiki/KISS_principle) way (Keep It Simple, Stupid).
 
 Jirafeau project won't evolve to a file manager and will focus to keep a very few dependencies.
 
+
 ## Screenshots
 
-- [Installation - Step 1](http://i.imgur.com/hmpT1eN.jpg)
-- [Installation - Step 2](http://i.imgur.com/2e0UGKE.jpg)
-- [Installation - Step 3](http://i.imgur.com/ofAjLXh.jpg)
-- [Installation - Step 4](http://i.imgur.com/WXqnfqJ.jpg)
-- [Upload - Step 1](http://i.imgur.com/SBmSwzJ.jpg)
-- [Upload - Step 2](http://i.imgur.com/wzPkb1Z.jpg)
-- [Upload - Progress](http://i.imgur.com/i6n95kv.jpg)
-- [Upload - Confirmation page](http://i.imgur.com/P2oS1MY.jpg)
-- [Admin Interface](http://i.imgur.com/nTdsVzn.png)
+- Installation: Step 1 - 4  
+![Installation - Step 1](http://i.imgur.com/hmpT1eNs.jpg) ![Installation - Step 2](http://i.imgur.com/2e0UGKEs.jpg) ![Installation - Step 3](http://i.imgur.com/ofAjLXhs.jpg) ![Installation - Step 4](http://i.imgur.com/WXqnfqJs.jpg)
+- Upload: Step 1 + 2, Progress & Confirmation  
+![Upload - Step 1](http://i.imgur.com/SBmSwzJs.jpg) ![Upload - Step 2](http://i.imgur.com/wzPkb1Zs.jpg) ![Upload - Progress](http://i.imgur.com/i6n95kvs.jpg) ![Upload - Confirmation page](http://i.imgur.com/P2oS1MYs.jpg)
+- Admin Interface  
+![Admin Interface](http://i.imgur.com/nTdsVzns.png)
+
 
 ## Installation
 
@@ -61,14 +61,15 @@ System requirements:
 - No database required, no mail required
 
 Installation steps:
-- Clone the [repository](https://gitlab.com/mojo42/Jirafeau/) or download the latest ([release](https://gitlab.com/mojo42/Jirafeau/tags) from GitLab onto your webserver
+- Clone the [repository](https://gitlab.com/mojo42/Jirafeau/) or download the latest [release](https://gitlab.com/mojo42/Jirafeau/tags) from GitLab onto your webserver
 - Set owner & group according to your webserver
 - A) Setup with the installation wizard (web):
   - Open your browser and go to your installed location, eg. ```https://example.com/jirafeau/```
   - The script will redirect to you to a minimal installation wizard to set up all required options
   - All optional parameters may be set in ```lib/config.local.php```, take a look at ```lib/config.original.php``` to see all default values
-- B) Setup without the installation wizard (cli):
+- B) Setup without the installation wizard (CLI):
   - Just copy ```config.original.php``` to ```config.local.php``` and customize it
+
 
 ## Upgrade
 
@@ -77,7 +78,7 @@ Installation steps:
 1. Backup your Jirafeau installation!
 2. Block access to Jirafeau
 3. Checkout the new version with Git using the [tagged release](https://gitlab.com/mojo42/Jirafeau/tags)
-   * If you have installed Jirafeau just by uploading files on your server, you can download the desired version, overwrite/remove all files and chown/chmod files if needed. Keep a backup of your local configuration file tough.
+   * If you have installed Jirafeau just by uploading files on your server, you can download the desired version, overwrite/remove all files and chown/chmod files if needed. Keep a backup of your local configuration file tough
 4. With you browser, go to your Jirafeau root page
 5. Follow the installation wizard, it should propose you the same data folder or even update automatically
 7. Check your ```/lib/config.local.php``` and compare it with the ```/lib/config.original.php``` to see if new configuration items are available
@@ -87,7 +88,7 @@ Installation steps:
 1. The download URL changed
    * Add a rewrite rule in your web server configuration to rename ```file.php``` to ```f.php``` to make older, still existing links work again
 1. The default theme changed
-   * Optionally change the theme in ```lib/config.local.php``` to »courgette«
+   * Optionally change the theme in ```/lib/config.local.php``` to »courgette«
 
 ### From version 1.2.0 to 2.0.0
 
@@ -113,24 +114,25 @@ Installation steps:
 
 ### Troubleshooting
 
-If you have some troubles, consider the following cases
+If you have some issues, consider the following cases
 
 - Check your ```/lib/config.local.php``` file and compare it with ```/lib/config.original.php```, the configuration syntax or a parameter may have changed
 - Check owner & permissions of your files
 
+
 ## Security
 
-```var``` directory contain all files and links. It is randomly named to limit access but you may add better protection to prevent un-authorized access to it.
+```/var/``` directory contains all files and links. It is randomly named to limit access but you may add better protection to prevent un-authorized access to it.
 You have several options:
 - Configure a ```.htaccess```
-- Move var folder to a place on your server which can't be directly accessed
-- Disable automatic listing on your web server config or place a index.html in var's sub-directory (this is a limited solution)
+- Move ```/var/``` folder to a place on your server which can't be directly accessed
+- Disable automatic listing on your web server config or place a index.html in ```/var/```'s sub-directory (this is a limited solution)
 
-If you are using Apache, you can add the following line to your configuration to prevent people to access to your ```var``` folder:
+If you are using [Apache](https://httpd.apache.org/), you can add the following line to your [.htaccess](https://httpd.apache.org/docs/2.4/howto/htaccess.html) to prevent people to access to your ```/var/``` folder:
 
 ```RedirectMatch 301 ^/var-.* http://my.service.jirafeau ```
 
-If you are using nginx, you can add the following to your $vhost.conf:
+If you are using [nginx](https://nginx.org/), you can add the following to your [nginx.conf](https://www.nginx.com/resources/wiki/start/topics/examples/server_blocks/):
 
 ```nginx
 location ~ /var-.* {
@@ -139,24 +141,26 @@ location ~ /var-.* {
 }
 ```
 
-You should also remove un-necessessary write access once the installation is done (ex: configuration file).
-An other obvious basic security is to let access users to the site by HTTPS.
+You should also remove un-necessessary write access once the installation is done (ex: configuration file).  
+Another obvious basic security measure is to let users access the site only by HTTPS.
+
 
 ## Server side encryption
 
-Data encryption can be activated in options. This feature makes the server encrypt data and send the decryt key to the user (inside download URL).
-The decrypt key is not stored on the server so if you loose an url, you won't be able to retrieve file content.
-In case of security troubles on the server, attacker won't be able to access files.
+Data encryption can be activated in the options. This feature makes the server encrypt data and send the decrytion key to the user (inside download URL).
+The decryption key is not stored on the server so if you loose an URL, you won't be able to retrieve file content.
+In case of security problems on the server, attackers won't be able to access files.
 
 By activating this feature, you have to be aware of few things:
--  Data encryption has a cost (cpu) and it takes more time for downloads to complete once file sent.
--  During the download, the server will decrypt on the fly (and use resource).
--  This feature needs to have the mcrypt php module.
+-  Data encryption has a cost (CPU) and it takes more time for downloads to complete once files are sent.
+-  During the download, the server will decrypt on the fly (and use more resources).
+-  This feature needs to have the mcrypt php module installed.
 -  File de-duplication will stop to work (as we can't compare two encrypted files).
--  Be sure your server do not log client's requests.
--  Don't forget to enable https.
+-  Be sure your server does not log client requests.
+-  Don't forget to enable HTTPS.
 
-In a next step, encryption will be made by the client (in javascript), see issue #10.
+In a next step, encryption will be made by the client (via javascript), see issue [#10](https://gitlab.com/mojo42/Jirafeau/-/issues/10).
+
 
 ## License
 
@@ -171,15 +175,17 @@ Take a look at the FAQ to find out about how to change the ToS.
 
 PS: If you have fixed errors or added features, then please contribute to the project and send a merge request with these changes.
  
+
 ## Contribution
 
-If you want to contribute to project, then take a look at the git repository:
+If you want to contribute to the project, then take a look at the git repository:
 
 - https://gitlab.com/mojo42/Jirafeau
 
 and the Contribution Guidelines
 
 - https://gitlab.com/mojo42/Jirafeau/blob/master/CONTRIBUTING.md
+
 
 ## FAQ
 
@@ -195,7 +201,7 @@ We would like to thank all anonymous contributors on weblate. :)
 
 ### How do I upgrade my Jirafeau?
 
-See upgrade instructions above.
+See upgrade instructions [above](#upgrade).
 
 ### How can I limit upload access?
 
@@ -312,6 +318,7 @@ So:
 ### How to contact someone from Jirafeau?
 
 Feel free to create an issue if you found a bug.
+
 
 ## Release notes
 
